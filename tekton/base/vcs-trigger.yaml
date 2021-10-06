@@ -56,20 +56,20 @@ spec:
   - apiVersion: tekton.dev/v1beta1
     kind: PipelineRun
     metadata:
-      generateName: nextjs-app-
+      generateName: next-js-app-
     spec:
       serviceAccountName: build-bot
       pipelineRef:
         name: nodejs
       params:
         - name: app-name
-          value: nextjs-app
+          value: next-js-app
         - name: source-repo
           value: $(tt.params.source-repo)
         - name: sha
           value: $(tt.params.sha)
         - name: image-repo
-          value: quay.io/fabrizio_pietrucci/nextjs-app
+          value: quay.io/johnmorenoing/next-js-app
       workspaces:
         - name: pipeline-shared-data
           volumeClaimTemplate: 

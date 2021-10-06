@@ -19,7 +19,7 @@ spec:
       dnsPolicy: ClusterFirst
       schedulerName: default-scheduler
       containers:
-      - name: nextjs-app
+      - name: next-js-app
         image: quay.io/johnmorenoing/next-js-app:latest
         ports:
         - name: http

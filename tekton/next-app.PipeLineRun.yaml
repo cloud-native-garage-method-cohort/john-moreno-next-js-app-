@@ -1,14 +1,14 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: nextjs-app-3
+  name: next-js-app-7
 spec:
   serviceAccountName: build-bot
   pipelineRef:
     name: nodejs
   params:
     - name: app-name
-      value: nextjs-app
+      value: next-js-app
     - name: source-repo
       value: https://github.com/cloud-native-garage-method-cohort/john-moreno-next-js-app-.git
     - name: image-repo
